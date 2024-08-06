@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+  <%- include('./layout/head'); %>
+  <body>
+    <%- include('./layout/header'); %> <%- include('./layout/blog-nav'); %>
+    <main>
+      <section class="blog-article-section">
+        <div class="container">
+          <%- include('./layout/breadcrumb'); %>
+
+          <!-- tags -->
+          <div class="color-primary font-700 my-8">
+            <a href="#" class="mr-15 md-mr-16 hover-color-darken">#special</a>
+            <a href="#" class="hover-color-darken">#event</a>
+          </div>
+
+          <!-- article -->
+          <section class="row article-content-section">
+            <article class="col-8 col-md-9">
+              <%- include('./layout/blog-article-content'); %>
+            </article>
+            <%- include('./layout/tags-sidebar'); %>
+          </section>
+
+          <!-- article footer -->
+          <%- include('./layout/blog-footer'); %>
+        </div>
+      </section>
+    </main>
+    <!-- page footer -->
+    <%- include('./layout/footer'); %>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+  <%- include('./layout/head'); %>
+  <body>
+    <%- include('./layout/header'); %>
+
+    <main>
+      <section class="page-section stores-page container">
+        <h1 class="page-title mb-32">門市據點</h1>
+        <!-- store selector -->
+        <div class="row">
+          <div class="col-4 col-md-7 flex items-center gap-16 sm-gap-8 mb-40">
+            <label for="store-select" class="fs-xl sm-fs-base">選擇分店</label>
+            <select name="stores" id="store-select" class="grow">
+              <option value="台北中山旗艦店" selected>台北中山旗艦店</option>
+              <option value="台北綠園店">台北綠園店</option>
+              <option value="台中清水旗艦店">台中清水旗艦店</option>
+              <option value="高雄中正形象店">高雄中正形象店</option>
+              <option value="高雄夢時代店">高雄夢時代店</option>
+            </select>
+          </div>
+        </div>
+        <!-- store card -->
+        <div class="row md-no-gutters md-gap-24">
+          <div class="col-5 col-md-12">
+            <div class="card store-card store-card-img-wrap">
+              <img src="../assets/images/store-1.png" alt="台北中山旗艦店" />
+              <div>
+                <h2 class="store-card__title">台北中山旗艦店</h2>
+                <div class="store-card__content">
+                  <p>
+                    <img src="../assets/images/ic_phone.svg" alt="phone icon" />
+                    <a href="#">電話：(02)000-1234</a>
+                  </p>
+                  <p>
+                    <img src="../assets/images/ic_clock.svg" alt="time icon" />
+                    <a href="#">營業時間：10:00 - 21:00</a>
+                  </p>
+                  <p>
+                    <img
+                      src="../assets/images/ic_pin.svg"
+                      alt="location pin icon"
+                    />
+                    <a href="#">地址：台北市中山區南京東路 25 巷 2 - 1 號</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- google map -->
+          <div class="col-7 col-md-12 flex">
+            <iframe
+              class="grow map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.458381191438!2d121.5265304744042!3d25.05244843755026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a966f6fc092d%3A0x9f740ea896779b57!2sNo.%2025%2C%20Section%202%2C%20Nanjing%20E%20Rd%2C%20Zhongshan%20District%2C%20Taipei%20City%2C%2010491!5e0!3m2!1sen!2stw!4v1722415771086!5m2!1sen!2stw"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- page footer -->
+    <%- include('./layout/footer'); %>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

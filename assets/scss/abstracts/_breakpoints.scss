@@ -1,0 +1,22 @@
+// breakpoints
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+
+@mixin sm-breakpoint {
+  @media screen and (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin md-breakpoint {
+  @media screen and (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lg-breakpoint {
+  @media screen and (max-width: $breakpoint-lg) {
+    @content;
+  }
+}

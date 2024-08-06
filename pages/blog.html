@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+  <%- include('./layout/head'); %>
+  <body>
+    <%- include('./layout/header'); %>
+    <!-- blog nav -->
+    <nav class="bg-primary-dark sm-hidden">
+      <div class="container">
+        <div class="flex justify-between">
+          <ul
+            class="flex gap-48 sm-gap-0 sm-w-full color-white justify-between"
+          >
+            <li><a href="#" class="py-13 sm-py-12">最新消息</a></li>
+            <li><a href="#" class="py-13 sm-py-12">特別企劃</a></li>
+            <li><a href="#" class="py-13 sm-py-12">新品上市</a></li>
+            <li><a href="#" class="py-13 sm-py-12">鏡框小知識</a></li>
+          </ul>
+          <div class="py-13 sm-hidden">
+            <img src="../assets/images/ic_search.svg" alt="search icon" />
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- blog articles -->
+      <section class="blog-section">
+        <div class="container">
+          <h1 class="page-title mb-32">部落格</h1>
+          <ul class="flex flex-col gap-60 md-gap-24">
+            <%- include('./layout/blog-card-1'); %> <%-
+            include('./layout/blog-card-2'); %> <%-
+            include('./layout/blog-card-3'); %> <%-
+            include('./layout/blog-card-4'); %> <%-
+            include('./layout/blog-card-5'); %>
+          </ul>
+        </div>
+      </section>
+      <%- include('./layout/pagination'); %>
+    </main>
+    <!-- page footer -->
+    <%- include('./layout/footer'); %>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

@@ -1,19 +1,242 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-  </head>
+<html lang="zh_Hant">
+  <%- include('./layout/head'); %>
   <body>
-    <%- include('./layout/header'); -%>
-
-    <h1 class="index-title">我是首頁</h1>
-    <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
-
-    <%- include('./layout/footer'); -%>
-
+    <%- include('./layout/header'); %>
+    <main>
+      <!-- banner -->
+      <section class="banner bg-img">
+        <div class="container">
+          <div class="row no-gutters banner__content items-center">
+            <div class="col text-end color-primary-dark">
+              <h1 class="fs-3xl font-300 sm-fs-base">
+                Promise-Desert 2020 早春系列
+              </h1>
+              <p class="fs-5xl font-700 sm-fs-xl">看得清，才能看得遠</p>
+              <a href="products.html" class="red-button hover-bgc-darken"
+                >立即購買</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- service features-->
+      <section class="services index-section bg-secondary">
+        <div class="container">
+          <h2 class="index-section-title title-primary mb-24">
+            用專業的心，做專業的事
+          </h2>
+          <ul class="row sm-gap-24">
+            <li class="col col-md-6">
+              <div class="services__card text-center h-100">
+                <img
+                  src="../assets/images/home-section2-1.png"
+                  alt="service icon"
+                  class="w-1/3 mb-24"
+                />
+                <h3 class="color-primary-dark fs-xl mb-8">單一價格</h3>
+                <p class="text-start">
+                  無論任何度數皆不需追加費用即可擁有適合自己的薄型球面鏡片。
+                </p>
+              </div>
+            </li>
+            <li class="col col-md-6">
+              <div class="services__card text-center h-100">
+                <img
+                  src="../assets/images/home-section2-2.png"
+                  alt="service icon"
+                  class="w-1/3 mb-24"
+                />
+                <h3 class="color-primary-dark fs-xl mb-8">20 分鐘即可取件</h3>
+                <p class="text-start">
+                  為了您的寶貴時間著想，以豐富專業知識與技術將結帳到交件的時間縮減至最快
+                  20 分鐘即可完成。
+                </p>
+              </div>
+            </li>
+            <li class="col col-md-6">
+              <div class="services__card text-center h-100">
+                <img
+                  src="../assets/images/home-section2-3.png"
+                  alt="service icon"
+                  class="w-1/3 mb-24"
+                />
+                <h3 class="color-primary-dark fs-xl mb-8">安心售後服務</h3>
+                <p class="text-start">
+                  我們提供長達 120
+                  天的保固售後服務，不限會員資格皆享有免費深層保養及專業維修服務。
+                </p>
+              </div>
+            </li>
+            <li class="col col-md-6">
+              <div class="services__card text-center h-100">
+                <img
+                  src="../assets/images/home-section2-4.png"
+                  alt="service icon"
+                  class="w-1/3 mb-24"
+                />
+                <h3 class="color-primary-dark fs-xl mb-8">關於鏡片</h3>
+                <p class="text-start">
+                  使用世界知名頂級品牌，抗UV、防汙鍍膜薄型非球面鏡片。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- classic products -->
+      <section class="products index-section">
+        <div class="container">
+          <h2 class="index-section-title title-primary mb-48">經典系列鏡框</h2>
+          <ul class="row md-flex-col md-items-center md-gap-24">
+            <li class="col-4 col-md-6">
+              <a href="products.html" class="block hover-opacity">
+                <img
+                  src="../assets/images/home-section3-1.png"
+                  alt="optical glasses"
+                  class="mb-8"
+                />
+                <h3 class="products__title">optical</h3>
+              </a>
+            </li>
+            <li class="col-4 col-md-6">
+              <a href="products-sunglasses.html" class="block hover-opacity">
+                <img
+                  src="../assets/images/home-section3-2.png"
+                  alt="sunglasses"
+                  class="mb-8"
+                />
+                <h3 class="products__title">SUNGLASSES</h3>
+              </a>
+            </li>
+            <li class="col-4 col-md-6">
+              <a href="products-functional.html" class="block hover-opacity">
+                <img
+                  src="../assets/images/home-section3-3.png"
+                  alt="functional glasses"
+                  class="mb-8"
+                />
+                <h3 class="products__title">FUNCTIONAL</h3>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- co-branded products -->
+      <section class="products-bgc bg-img index-section">
+        <div class="container">
+          <h2 class="index-section-title title-light mb-48">聯名設計鏡框</h2>
+          <div class="row no-gutters md-gap-24">
+            <div class="col-6 col-md-12">
+              <a href="#" class="block hover-opacity">
+                <picture>
+                  <source
+                    srcset="../assets/images/home-section4-1-sm.png"
+                    media="(max-width: 640px)"
+                  />
+                  <img
+                    src="../assets/images/home-section4-1.png"
+                    alt="Double A+ glasses"
+                  />
+                </picture>
+                <h3 class="products__title py-8 bg-white">Double A+</h3>
+              </a>
+            </div>
+            <div class="col-6 col-md-12">
+              <a href="#" class="block hover-opacity">
+                <picture>
+                  <source
+                    srcset="../assets/images/home-section4-2-sm.png"
+                    media="(max-width: 640px)"
+                  />
+                  <img
+                    src="../assets/images/home-section4-2.png"
+                    alt="Youth glasses"
+                  />
+                </picture>
+                <h3 class="products__title py-8 bg-white">youth</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- customer recommendation -->
+      <section class="recommend index-section">
+        <div class="container">
+          <h2 class="index-section-title title-primary mb-48">顧客推薦</h2>
+          <ul class="row md-row-gap-24">
+            <li class="col-3 col-md-6">
+              <div class="recommend-card">
+                <img
+                  src="../assets/images/home-section5-1.png"
+                  alt="customer photo"
+                />
+                <div class="recommend-card__content">
+                  <b class="font-500">Jessy</b>
+                  <p>眼鏡品質優良，下次還會想來這邊購買！</p>
+                  <time datetime="2021-06-20" class="recommend-card__date"
+                    >2021/06/20</time
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="col-3 col-md-6">
+              <div class="recommend-card">
+                <img
+                  src="../assets/images/home-section5-2.png"
+                  alt="customer photo"
+                />
+                <div class="recommend-card__content">
+                  <b class="font-500">凱倫</b>
+                  <p>
+                    做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！
+                  </p>
+                  <time datetime="2021-04-18" class="recommend-card__date"
+                    >2021/04/18</time
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="col-3 col-md-6">
+              <div class="recommend-card">
+                <img
+                  src="../assets/images/home-section5-3.png"
+                  alt="customer photo"
+                />
+                <div class="recommend-card__content">
+                  <b class="font-500">悠悠</b>
+                  <p>
+                    謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！
+                  </p>
+                  <time datetime="2020-12-25" class="recommend-card__date"
+                    >2020/12/25</time
+                  >
+                </div>
+              </div>
+            </li>
+            <li class="col-3 col-md-6">
+              <div class="recommend-card">
+                <img
+                  src="../assets/images/home-section5-4.png"
+                  alt="customer photo"
+                />
+                <div class="recommend-card__content">
+                  <b class="font-500">Kyuan</b>
+                  <p>服務很好，品質沒有任何問題，非常喜歡。</p>
+                  <time datetime="2020-10-31" class="recommend-card__date"
+                    >2020/10/31</time
+                  >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- contact form -->
+      <%- include('./layout/contact-form'); %>
+    </main>
+    <!-- page footer -->
+    <%- include('./layout/footer'); %>
     <script type="module" src="../main.js"></script>
   </body>
 </html>

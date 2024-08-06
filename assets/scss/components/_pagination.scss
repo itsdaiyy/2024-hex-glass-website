@@ -1,0 +1,38 @@
+.pagination {
+  margin-bottom: 80px;
+
+  nav {
+    border: 1px solid $color-grey-300;
+    margin-inline: auto;
+    max-width: 372px;
+    background-color: $color-white;
+  }
+
+  a {
+    flex-grow: 1;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  a + a {
+    border-left: 1px solid $color-grey-300;
+  }
+
+  a:hover {
+    background-color: #f2f2f2;
+  }
+
+  .active {
+    background-color: $color-black;
+    color: $color-white;
+  }
+}
+
+@include sm-breakpoint {
+  .pagination {
+    margin-bottom: 64px;
+    nav {
+      max-width: 350px;
+    }
+  }
+}

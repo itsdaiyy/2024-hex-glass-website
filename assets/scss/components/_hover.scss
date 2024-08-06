@@ -1,0 +1,33 @@
+.hover {
+  &-underline:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+
+  &-opacity {
+    transition: filter 300ms;
+    &:hover {
+      filter: brightness(85%);
+    }
+  }
+
+  &-scale {
+    transition: transform 300ms;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &-color-darken {
+    transition: color 300ms;
+    &:hover {
+      color: darken($color-primary, 8%);
+    }
+  }
+  &-bgc-darken {
+    transition: background-color 300ms;
+    &:hover {
+      background-color: darken($color-primary, 8%);
+    }
+  }
+}

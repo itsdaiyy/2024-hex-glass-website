@@ -1,0 +1,34 @@
+.banner {
+  background-image: url("../images/home-header.png");
+
+  &__content {
+    height: 787px;
+
+    p {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+@include md-breakpoint {
+  .banner {
+    background-image: url("../images/home-header-sm.png");
+  }
+}
+
+@include sm-breakpoint {
+  .banner {
+    &__content {
+      height: 396px;
+    }
+
+    h1 {
+      font-size: $font-size-base;
+    }
+
+    p {
+      font-size: $font-size-xl;
+      margin-bottom: 8px;
+    }
+  }
+}

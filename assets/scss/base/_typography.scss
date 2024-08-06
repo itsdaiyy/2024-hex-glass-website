@@ -1,0 +1,53 @@
+// font-size
+.fs-5xl {
+  font-size: $font-size-5xl;
+}
+
+.fs-4xl {
+  font-size: $font-size-4xl;
+}
+
+.fs-3xl {
+  font-size: $font-size-3xl;
+}
+
+.fs-2xl {
+  font-size: $font-size-2xl;
+}
+
+.fs-xl {
+  font-size: $font-size-xl;
+}
+
+.fs-lg {
+  font-size: $font-size-lg;
+}
+
+.fs-base {
+  font-size: $font-size-base;
+}
+
+// font-weight
+$font-weight: 9;
+
+@for $i from 1 through $font-weight {
+  .font-#{$i}00 {
+    font-weight: $i * 100;
+  }
+}
+
+@include lg-breakpoint {
+  .md-fs-base {
+    font-size: $font-size-base;
+  }
+}
+
+@include sm-breakpoint {
+  .sm-fs-base {
+    font-size: $font-size-base;
+  }
+
+  .sm-fs-xl {
+    font-size: $font-size-xl;
+  }
+}

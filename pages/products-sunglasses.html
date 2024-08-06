@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+  <%- include('./layout/head'); %>
+  <body>
+    <%- include('./layout/header'); %>
+
+    <main>
+      <!-- product category nav -->
+      <div class="products__nav">
+        <div class="container"><%- include('./layout/products-nav-2'); %></div>
+        <%- include('./layout/products-banner-2'); %>
+      </div>
+      <!-- products -->
+      <%- include('./layout/products-section-2'); %>
+
+      <!-- pagination -->
+      <%- include('./layout/pagination'); %>
+    </main>
+
+    <!-- page footer -->
+    <%- include('./layout/footer'); %>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

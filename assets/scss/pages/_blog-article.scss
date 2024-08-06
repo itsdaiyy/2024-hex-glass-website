@@ -1,0 +1,30 @@
+.blog-article {
+  &__img {
+    margin-bottom: 8px;
+
+    @include lg-breakpoint {
+      margin-bottom: 16px;
+    }
+
+    @include sm-breakpoint {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__content {
+    margin-bottom: 40px;
+    color: $color-grey-300;
+
+    @include lg-breakpoint {
+      margin-bottom: 24px;
+    }
+
+    @include sm-breakpoint {
+      margin-bottom: 16px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

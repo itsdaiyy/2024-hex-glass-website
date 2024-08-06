@@ -1,0 +1,113 @@
+$grid-sum: 12;
+$grid-sm-sum: 4;
+$gutter: 24px;
+
+.container {
+  max-width: 1296px;
+  margin-inline: auto;
+  padding-left: calc($gutter / 2);
+  padding-right: calc($gutter / 2);
+
+  @include lg-breakpoint {
+    max-width: 696px;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+  margin: 0 auto;
+  margin: 0 auto;
+  padding-left: calc($gutter / 2);
+  padding-right: calc($gutter / 2);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc($gutter / -2);
+  margin-right: calc($gutter / -2);
+}
+
+.row > * {
+  width: 100%;
+  max-width: 100%;
+}
+
+.col {
+  flex: 1 0 0%;
+  padding-left: calc($gutter / 2);
+  padding-right: calc($gutter / 2);
+}
+
+@for $i from 1 through $grid-sum {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: calc(100% * ($i / $grid-sum));
+    padding-inline: calc($gutter / 2);
+  }
+}
+
+@include lg-breakpoint {
+  @for $i from 1 through $grid-sum {
+    .col-md-#{$i} {
+      flex: 0 0 auto;
+      width: calc(100% * ($i / $grid-sum));
+      padding-inline: calc($gutter / 2);
+    }
+  }
+}
+
+@include sm-breakpoint {
+  .col {
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  @for $i from 1 through $grid-sum {
+    .col-#{$i} {
+      flex: 0 0 auto;
+      width: 100%;
+      padding-inline: calc($gutter / 2);
+    }
+  }
+
+  @for $i from 1 through $grid-sum {
+    .col-md-#{$i} {
+      flex: 0 0 auto;
+      width: 100%;
+      padding-inline: calc($gutter / 2);
+    }
+  }
+
+  @for $i from 1 through $grid-sm-sum {
+    .col-sm-#{$i} {
+      flex: 0 0 auto;
+      width: calc(100% * ($i / $grid-sm-sum));
+      padding-inline: calc($gutter / 2);
+    }
+  }
+}
+
+// 只要 .row 新增 .no-gutters
+// 即可取消自身 margin 以及底下的 col 的 padding
+.no-gutters {
+  margin-left: 0px;
+  margin-right: 0px;
+
+  & > [class*="col"] {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@include lg-breakpoint {
+  .md-no-gutters {
+    margin-left: 0px;
+    margin-right: 0px;
+
+    & > [class*="col"] {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+}

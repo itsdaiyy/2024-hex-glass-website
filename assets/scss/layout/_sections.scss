@@ -1,0 +1,64 @@
+.index-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include sm-breakpoint {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.products-section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include sm-breakpoint {
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+}
+
+.page-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  @include sm-breakpoint {
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+}
+
+.blog-section {
+  padding-top: 96px;
+  padding-bottom: 124px;
+
+  @include lg-breakpoint {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include sm-breakpoint {
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+}
+
+.blog-article-section {
+  padding-top: 24px;
+  padding-bottom: 80px;
+  @include lg-breakpoint {
+    padding-top: 8px;
+  }
+
+  @include sm-breakpoint {
+    padding-top: 16px;
+    padding-bottom: 64px;
+  }
+}
+
+.article-content-section {
+  margin-bottom: 40px;
+  @include sm-breakpoint {
+    margin-bottom: 0;
+  }
+}

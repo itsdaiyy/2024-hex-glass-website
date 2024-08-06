@@ -1,0 +1,231 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+// ====================
+// index recommend card
+// ====================
+
+.recommend-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 4px;
+  box-shadow: 0px 2px 6px $color-grey-100;
+
+  &__content {
+    min-height: 205px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+  }
+
+  &__date {
+    margin-top: auto;
+    color: $color-grey-200;
+  }
+}
+
+// ====================
+// products page card
+// ====================
+
+.product-card {
+  display: block;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    font-size: $font-size-xl;
+  }
+
+  &__price {
+    color: $color-primary;
+    font-weight: 500;
+  }
+
+  &__colors {
+    display: flex;
+    gap: 8px;
+  }
+
+  .square {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+
+    &:nth-of-type(1) {
+      background-color: $color-product-1;
+    }
+
+    &:nth-of-type(2) {
+      background-color: $color-product-2;
+    }
+  }
+}
+
+// ====================
+// stores page card
+// ====================
+
+.store-card {
+  color: #212529;
+
+  & > img {
+    object-fit: cover;
+  }
+
+  &__title,
+  &__content {
+    padding-inline: 24px;
+  }
+
+  &__content,
+  &__button {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 1px solid $color-grey-100;
+  }
+
+  &__content {
+    font-size: $font-size-lg;
+    border: 1px solid $color-grey-100;
+    p + p {
+      margin-top: 8px;
+    }
+
+    p {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+    }
+
+    img {
+      margin-top: 5px;
+    }
+  }
+
+  &__button {
+    font-size: 19px;
+    text-align: center;
+    background-color: $color-black;
+    color: $color-white;
+    font-weight: 300;
+  }
+}
+
+@include lg-breakpoint {
+  .store-card-img-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: -12px;
+
+    & > * {
+      width: 50%;
+      padding-inline: 12px;
+    }
+  }
+}
+
+@include sm-breakpoint {
+  .store-card-img-wrap {
+    flex-direction: column;
+    margin-inline: 0;
+
+    & > * {
+      width: 100%;
+      padding-inline: 0;
+    }
+  }
+}
+
+// ====================
+// blog card
+// ====================
+
+.blog-card {
+  flex-direction: row;
+
+  & > * {
+    width: 50%;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+
+    h2 {
+      font-size: $font-size-2xl;
+      color: $color-primary-dark;
+    }
+    p {
+      font-size: $font-size-lg;
+    }
+    time {
+      color: rgba($color-black, 0.7);
+    }
+
+    &:hover {
+      h2 {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+    }
+  }
+
+  &__text {
+    color: $color-grey-300;
+    font-size: $font-size-lg;
+  }
+
+  @include lg-breakpoint {
+    &__title {
+      margin-bottom: 4px;
+      h2 {
+        font-size: $font-size-xl;
+      }
+      p {
+        font-size: $font-size-base;
+      }
+    }
+    &__text {
+      font-size: $font-size-base;
+    }
+  }
+
+  @include sm-breakpoint {
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// ====================
+// FAQ page card
+// ====================
+
+.faq-card {
+  & + & {
+    margin-top: 32px;
+  }
+
+  h3 {
+    font-size: $font-size-lg;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+}

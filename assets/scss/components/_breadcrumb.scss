@@ -1,0 +1,25 @@
+.breadcrumb {
+  display: flex;
+
+  &__item + &__item::before {
+    padding-left: 8px;
+    padding-right: 8px;
+    content: "/";
+    color: $color-black;
+  }
+
+  .active {
+    color: $color-primary;
+  }
+
+  a:hover {
+    color: $color-primary-dark;
+  }
+
+  @include sm-breakpoint {
+    &__item + &__item::before {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+}

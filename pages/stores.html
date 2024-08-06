@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh_Hant">
+  <%- include('./layout/head'); %>
+  <body>
+    <%- include('./layout/header'); %>
+
+    <main>
+      <section class="page-section stores-page container">
+        <h1 class="page-title mb-32">門市據點</h1>
+        <div class="row">
+          <!-- location selector -->
+          <div class="col-4 col-md-7 flex items-center gap-16 sm-gap-8 mb-40">
+            <label for="location-select" class="fs-xl sm-fs-base"
+              >選擇地區</label
+            >
+            <select name="locations" id="location-select" class="grow">
+              <option value="taipei" selected>台北市</option>
+              <option value="taichung">台中市</option>
+              <option value="kaohsiung">高雄市</option>
+            </select>
+          </div>
+        </div>
+        <!-- store cards -->
+        <ul class="row row-gap-48 md-row-gap-24">
+          <li class="col-4 col-md-6">
+            <div class="card store-card">
+              <%- include('./layout/store-card-1'); %>
+              <a href="store-1.html" class="store-card__button">詳細資訊</a>
+            </div>
+          </li>
+          <li class="col-4 col-md-6">
+            <div class="card store-card">
+              <%- include('./layout/store-card-2'); %>
+              <a href="store-1.html" class="store-card__button">詳細資訊</a>
+            </div>
+          </li>
+          <li class="col-4 col-md-6">
+            <div class="card store-card">
+              <%- include('./layout/store-card-3'); %>
+              <a href="store-1.html" class="store-card__button">詳細資訊</a>
+            </div>
+          </li>
+          <li class="col-4 col-md-6">
+            <div class="card store-card">
+              <%- include('./layout/store-card-4'); %>
+              <a href="store-1.html" class="store-card__button">詳細資訊</a>
+            </div>
+          </li>
+          <li class="col-4 col-md-6">
+            <div class="card store-card">
+              <%- include('./layout/store-card-5'); %>
+              <a href="store-1.html" class="store-card__button">詳細資訊</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <!-- page footer -->
+    <%- include('./layout/footer'); %>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
