@@ -7,8 +7,10 @@
     <main>
       <!-- product category nav -->
       <div class="products__nav">
-        <div class="container"><%- include('./layout/products-nav-2'); %></div>
-        <%- include('./layout/products-banner-2'); %>
+        <div class="container">
+          <%- include('./layout/products-nav', {page: 'sunglasses'}); %>
+        </div>
+        <%- include('./layout/products-banner', {page: 'sunglasses'}); %>
       </div>
       <!-- products -->
       <%- include('./layout/products-section-2'); %>
